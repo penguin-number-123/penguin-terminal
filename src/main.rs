@@ -6,9 +6,13 @@ use std::io::Write;
 use std::process::Stdio;
 use std::path::Path;
 use std::process::Child;
+use std::path::PathBuf;
 fn main(){
     loop {
-        print!("> ");
+
+        print!("{:?}>",env::current_dir().expect("Path Error"));
+
+        
         stdout().flush();
 
         let mut input = String::new();
